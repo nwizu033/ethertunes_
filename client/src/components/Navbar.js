@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import logo from '../../public/logo.jpeg'
+import { Web3Button } from "@web3modal/react";
 
 
 function Navbar() {
@@ -15,8 +16,8 @@ function Navbar() {
             <Link href='/'>Music NFTs</Link>
             <Link href='/'>Whitepaper</Link>
           </div>
-          <div className='mr-6'>Connect wallet</div>
-
+             {/* <div className='mr-6'>Connect wallet</div> */}
+            <Web3Button className='mr-6'/>
     </nav>
 
   )
