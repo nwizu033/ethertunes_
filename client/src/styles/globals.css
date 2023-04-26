@@ -8,5 +8,5 @@ body{
 }
 
 .blocks{
-  @apply border-2 border-white rounded px-3 py-3 flex w-full;
+  @apply border-2 border-white rounded-2xl px-3 py-3 w-full mx-6 my-10;
 }

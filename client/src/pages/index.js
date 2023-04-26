@@ -4,6 +4,7 @@ import logo from '../../public/logo.jpeg';
 import chainideco from '../../public/chainideco.jpeg';
 import bunzz from '../../public/bunzz.jpeg';
 import web3Afrika from '../../public/web3afrika.jpeg';
+import singer from '../../public/singer.jpeg';
 
 export default function Home() {
   return (
@@ -40,38 +41,107 @@ export default function Home() {
         </div>
 
 
-        <div>
+        <div className='flex justify-between px-20'>
+            <div>
+
+                    <div className='blocks flex'>
+                      <div className='border-2 bg-purple-500 h-10 w-10 mr-5 mt-5'></div>
+                        <div>
+                          <span className='block text-2xl'>DIVERSE MUSIC</span>
+                          <span className='block text-2xl mb-3'>SELECTION</span>
+
+                          <p className='tracking-wider'>Wide range of genre</p>
+                          <span className='tracking-wider'>for every taste</span>
+                        </div>
+              
+                    </div>
+
+            <div className='blocks flex'>
+                  <div className='border-2 bg-purple-500 h-10 w-10 mr-5 mt-5'></div>
+                    <div>
+                      <span className='block text-2xl'>DIVERSE MUSIC</span>
+                      <span className='block text-2xl mb-3'>SELECTION</span>
+
+                      <p className='tracking-wider'>Wide range of genre</p>
+                      <span className='tracking-wider'>for every taste</span>
+                    </div>
+                  
+            </div>
+
+            <div className='blocks flex'>
+                  <div className='border-2 bg-purple-500 h-10 w-10 mr-5 mt-5'></div>
+                    <div>
+                      <span className='block text-2xl'>DIVERSE MUSIC</span>
+                      <span className='block text-2xl mb-3'>SELECTION</span>
+
+                      <p className='tracking-wider'>Wide range of genre</p>
+                      <span className='tracking-wider'>for every taste</span>
+                    </div>
+                  
+            </div>
+            </div>
+
+    
+
+          <div className='flex items-center'>
+                <div>
+                    <Image src={logo} width={300} height={300}/>
+                </div>
+          </div>
+          
           <div>
-            <div className='blocks'>
-              <span>DIVERSE MUSIC</span>
-              <span className='block'>SELECTION</span>
+            <div>
+              <div className='blocks flex'>
+              <div className='border-2 bg-purple-500 h-10 w-10 mr-5 mt-5'></div>
+                <div>
+                  <span className='block text-2xl'>DIVERSE MUSIC</span>
+                  <span className='block text-2xl mb-3'>SELECTION</span>
 
-              <p>Wide range of genre</p>
-              <span>for every taste</span>
-            </div>
+                  <p className='tracking-wider'>Wide range of genre</p>
+                  <span className='tracking-wider'>for every taste</span>
+                </div>
+              
+              
+              </div>
 
-            <div className='blocks'>
-              <span>HIGH-QUALITY</span>
-                <span className='block'>AUDIO</span>
+              <div className='blocks flex'>
+              <div className='border-2 bg-purple-500 h-10 w-10 mr-5 mt-5'></div>
+                <div>
+                  <span className='block text-2xl'>DIVERSE MUSIC</span>
+                  <span className='block text-2xl mb-3'>SELECTION</span>
 
-                <p>Superio sound quality</p>
-                <span>for exceptional</span>
-                <span>listening</span>
-            </div>
+                  <p className='tracking-wider'>Wide range of genre</p>
+                  <span className='tracking-wider'>for every taste</span>
+                </div>
+      
+              </div>
 
-            <div className='blocks'>
-            <span>TRANSPARENT</span>
-                <span className='block'>ROYALTIES</span>
+              <div className='blocks flex'>
+              <div className='border-2 bg-purple-500 h-10 w-10 mr-5 mt-5'></div>
+                <div>
+                  <span className='block text-2xl'>DIVERSE MUSIC</span>
+                  <span className='block text-2xl mb-3'>SELECTION</span>
 
-                <p>Fair and transparent</p>
-                <span>compensation for</span>
-                <span>artists</span>
+                  <p className='tracking-wider'>Wide range of genre</p>
+                  <span className='tracking-wider'>for every taste</span>
+                </div>
             </div>
           </div>
-          <div>center</div>
-          <div>right</div>
         </div>
-        <div>Upload music</div>
+        </div>
+
+        <div className='flex px-10'>
+          <div>
+            <Image src={singer}/>
+          </div>
+          <div>
+            <h2>ARE YOU AN ARTIST?</h2>
+            <span>UPLOAD YOUR</span>
+            <span>SONGS</span>
+
+            
+          </div>
+        </div>
         <div>List Events</div>
         <div>Upcoming Events</div>
         <div>Top songs</div>
