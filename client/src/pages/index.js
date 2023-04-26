@@ -5,6 +5,7 @@ import chainideco from '../../public/chainideco.jpeg';
 import bunzz from '../../public/bunzz.jpeg';
 import web3Afrika from '../../public/web3afrika.jpeg';
 import singer from '../../public/singer.jpeg';
+import stage from '../../public/stage.jpg';
 
 export default function Home() {
   return (
@@ -145,10 +146,53 @@ export default function Home() {
           </div>
         </div>
 
-        <div>List Events</div>
-        <div>Upcoming Events</div>
-        <div>Top songs</div>
-        <div>Top songs</div>
+        <div className='flex px-10 mt-36 items-center gap-24'>
+            <div>
+                <h2 className='text-2xl'>YOU'VE GOT AN EVENT</h2>
+                <span className='text-7xl'>LIST YOUR</span>
+                <span className='block text-7xl'>EVENTS</span>
+
+                <span className='block text-2xl mt-8'>We provide a platform for event organizers to promote</span>
+                <span className='block text-2xl mt-2'>their events to a wider audience within the web3</span>
+                <span className='block text-2xl mt-2' >ecosystem.</span>
+
+                <button className='mt-8'>List Event</button>
+            </div>
+            <div>
+                <div>
+                   <Image src={stage} height={650} width={650}/>
+                </div>
+            </div>
+        </div>
+        <div className='mt-20'>
+            <div className='flex justify-center text-5xl'>UPCOMING EVENTS</div>
+            <div className='border-2 border-white'>
+              <div>
+                <span className='block'>Theme</span>
+                <span className='block'>Event ID</span>
+                <span className='block'>Reg fee(ETH)</span>
+                <span className='block'>Reg fee(ETT)</span>
+                <span className='block'>Max Attendees</span>
+                <span className='block'>End Time</span>
+
+              </div>
+            </div>
+        </div>
+
+        <div className='mt-20'>
+            <div className='flex justify-center text-5xl'>TOP SONGS</div>
+            <div className='border-2 border-white'>
+              <div>
+                <span className='block'>Theme</span>
+                <span className='block'>Event ID</span>
+                <span className='block'>Reg fee(ETH)</span>
+                <span className='block'>Reg fee(ETT)</span>
+                <span className='block'>Max Attendees</span>
+                <span className='block'>End Time</span>
+
+              </div>
+            </div>
+        </div>
 
     </main>
   )
