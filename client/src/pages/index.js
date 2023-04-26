@@ -130,18 +130,21 @@ export default function Home() {
         </div>
         </div>
 
-        <div className='flex px-10'>
+        <div className='flex px-10 mt-36 items-center gap-24'>
           <div>
-            <Image src={singer}/>
+            <Image src={singer} height={650} width={650}/>
           </div>
           <div>
-            <h2>ARE YOU AN ARTIST?</h2>
-            <span>UPLOAD YOUR</span>
-            <span>SONGS</span>
+            <h2 className='text-2xl'>ARE YOU AN ARTIST?</h2>
+            <span className='text-7xl'>UPLOAD YOUR</span>
+            <span className='block text-7xl'>SONGS</span>
+            <span className='block text-2xl mt-8'>We provide a level playing field, allowing emerging</span>
+            <span className='block text-2xl mt-2'>artists to compete with established musicians</span>
 
-            
+            <button className='mt-8'>Sign Up As An Artist</button>
           </div>
         </div>
+
         <div>List Events</div>
         <div>Upcoming Events</div>
         <div>Top songs</div>
