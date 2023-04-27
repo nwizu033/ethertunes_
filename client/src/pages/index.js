@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </div>
 
-
+        <div className='text-center text-7xl mt-24 mb-16 tracking-wider'>WHY CHOOSE US</div>
         <div className='flex justify-between px-20'>
             <div>
 
