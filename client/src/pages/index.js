@@ -216,12 +216,12 @@ export default function Home() {
                 </div>
             </div>
         </div>
-        <div className='mt-20 relative'>
+        <div className='mt-20'>
             <div className='flex justify-center text-5xl mb-16'>UPCOMING EVENTS</div>
             <div className='grid md:grid-cols-3 gap-10 '>
               {
                 eventList?.map((res) =>(
-                  <div className='border-4 border-white rounded-2xl py-4 px-4 shadow-md' key={res.eventId}>
+                  <div className='border-4 border-white rounded-2xl py-4 px-4 shadow-md relative' key={res.eventId}>
                   <span className='block text-3xl text-center my-4 uppercase'>{res.theme}</span>
                   <span className='block text-2xl'>Event ID: {(res.eventId).toString()}</span>
                   <span className='block mt-2 text-2xl'>Reg fee(ETH): {((res.registrationFeeEther)/1e18).toString()} ETH</span>
@@ -235,8 +235,8 @@ export default function Home() {
               }
 
           {showModal? (
-                  <div className='flex  items-start text-black'>
-                  <div className='bg-slate-400 absolute opacity-70 w-80 rounded-md z-50'>
+                  <div className='flex-col absolute justify-center items-center text-black'>
+                  <div className='bg-slate-400 opacity-70 w-80 rounded-md z-50'>
                     <div className='flex justify-end'>
                     <span onClick={()=> setShowModdal(false)} className='mr-5 mt-2 cursor-pointer'>X</span>
                     </div>
@@ -244,7 +244,7 @@ export default function Home() {
                         <input className='rounded-md text-center' type='number' placeholder='Event ID' />
                       </div>
               
-                      <div className='mt-4 flex gap-10 w-full px-6 mb-6'>
+                      <div className='mt-4 flex-col gap-10 w-full px-6 mb-8'>
                          <span className='border-2 rounded-md cursor-pointer'>Buy with Ether</span>
                          <span className='border-2 rounded-md cursor-pointer'>Buy with Token</span>
                       </div>
@@ -260,15 +260,19 @@ export default function Home() {
         <div className='mt-20'>
             <div className='flex justify-center text-5xl'>TOP SONGS</div>
             <div className=' grid grid-cols-3 gap-10'>
-              <div className='border-2 border-white rounded-2xl py-4 px-4'>
-                <span className='block'>Theme</span>
-                <span className='block'>Event ID</span>
-                <span className='block'>Reg fee(ETH)</span>
-                <span className='block'>Reg fee(ETT)</span>
-                <span className='block'>Max Attendees</span>
-                <span className='block'>End Time</span>
-
-              </div>
+            {
+                musicList?.map((res) =>(
+                  <div className='border-4 border-white rounded-2xl py-4 px-4 shadow-md' key={res.musicId}>
+                  <span className='block text-3xl text-center my-4 uppercase'>{res.title}</span>
+                  <span className='block text-3xl text-center mt-4 uppercase mb-6'>({res.artist})</span>
+                  <span className='block text-2xl'>Music ID: {(res.musicId).toString()}</span>
+                  <span className='block mt-2 text-2xl'>Price(ETH): {((res.etherPrice)/1e18).toString()} ETH</span>
+                  <span className='block mt-2 text-2xl'>Price(ETT): {((res.tokenPrice)/1e18).toString()} $ETT</span>
+                  <span className='block mt-2 text-2xl'>Downloads: {(res.buyers).toString()}</span>
+                  <span className='block border-2 w-36 text-center text-2xl mt-8 rounded-md cursor-pointer mb-10' onClick={(e)=>setShowModdal(true)}>Buy Music</span>
+                </div>
+                ))
+              }
             </div>
         </div>
 
