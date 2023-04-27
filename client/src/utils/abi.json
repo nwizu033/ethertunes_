@@ -330,6 +330,11 @@
 						"internalType": "string",
 						"name": "TOKEN_URI",
 						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "eventOwner",
+						"type": "address"
 					}
 				],
 				"internalType": "struct EtherTunes.eventCard[]",
@@ -400,6 +405,11 @@
 						"internalType": "string",
 						"name": "tokenUri",
 						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "musicOwner",
+						"type": "address"
 					}
 				],
 				"internalType": "struct EtherTunes.musicCard[]",

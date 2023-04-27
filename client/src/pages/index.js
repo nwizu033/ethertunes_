@@ -14,7 +14,7 @@ import { useSigner } from "wagmi";
 export default function Home() {
   const [eventList, setEventList] = useState([]);
 	const [musicList, setMusicList] = useState([]);
-	const contractAddress = "0xb8c04b4d4FF00E1a8E4b7140AF6E213907B3bb10";
+	const contractAddress = "0xAF349aCa502721695616722647eA2384Eb05c7eD";
   const { data: signer, isError, isLoading } = useSigner();
   const [showModal, setShowModdal] = useState(true);
   const date = (timeStamp) => {
@@ -208,7 +208,7 @@ export default function Home() {
                 <span className='block text-2xl mt-2'>their events to a wider audience within the web3</span>
                 <span className='block text-2xl mt-2' >ecosystem.</span>
 
-                <Link href='/list_event'> <span className='mt-8'>List Event</span></Link>
+                <Link href='/list_event'> <span className=' block border-2 px-5 text-2xl mt-12 w-40 text-center rounded-md'>List Event</span></Link>
             </div>
             <div>
                 <div>
@@ -216,9 +216,9 @@ export default function Home() {
                 </div>
             </div>
         </div>
-        <div className='mt-20'>
+        <div className='mt-20 relative'>
             <div className='flex justify-center text-5xl mb-16'>UPCOMING EVENTS</div>
-            <div className='grid md:grid-cols-3 gap-10 relative'>
+            <div className='grid md:grid-cols-3 gap-10 '>
               {
                 eventList?.map((res) =>(
                   <div className='border-4 border-white rounded-2xl py-4 px-4 shadow-md' key={res.eventId}>
@@ -229,14 +229,14 @@ export default function Home() {
                   <span className='block mt-2 text-2xl'>Max Attendees: {(res.maxAttendees).toString()}</span>
                   <span className='block mt-2 text-2xl'>Current Registrants: {(res.currentRegistrants).toString()}</span>
                   <span className='block mt-2 text-1xl'>End Time: {(date(res.endTime * 1000))}</span>
-                  <span className='block border-2 w-36 text-center text-2xl mt-4 rounded-md cursor-pointer' onClick={(e)=>setShowModdal(true)}>Buy Ticket</span>
+                  <span className='block border-2 w-36 text-center text-2xl mt-8 rounded-md cursor-pointer mb-10' onClick={(e)=>setShowModdal(true)}>Buy Ticket</span>
                 </div>
                 ))
               }
 
           {showModal? (
-                  <div className='flex justify-center items-center'>
-                  <div className='bg-slate-400 absolute opacity-70 w-80 rounded-md '>
+                  <div className='flex  items-start text-black'>
+                  <div className='bg-slate-400 absolute opacity-70 w-80 rounded-md z-50'>
                     <div className='flex justify-end'>
                     <span onClick={()=> setShowModdal(false)} className='mr-5 mt-2 cursor-pointer'>X</span>
                     </div>
