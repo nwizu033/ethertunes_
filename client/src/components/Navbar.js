@@ -14,7 +14,7 @@ function Navbar() {
             <Link href='/'>Home</Link>
             <Link href='/events'>Events</Link>
             <Link href='/musicnfts'>Music NFTs</Link>
-            <Link href='/'>Whitepaper</Link>
+            <Link href='https://app.gitbook.com/o/J7nKfvAEzUPYMvNtA9SZ/s/brRSxa7KCLGS9NIyw8lx/~/changes/3/ethertunes-token/deployed-contracts'>Whitepaper</Link>
           </div>
              {/* <div className='mr-6'>Connect wallet</div> */}
             <Web3Button className='mr-6'/>

@@ -16,7 +16,8 @@ export default function Home() {
 	const [musicList, setMusicList] = useState([]);
 	const contractAddress = "0xAF349aCa502721695616722647eA2384Eb05c7eD";
   const { data: signer, isError, isLoading } = useSigner();
-  const [showModal, setShowModdal] = useState(true);
+  const [showModal, setShowModdal] = useState(false);
+  const [showMusicModal, setShowMusicModdal] = useState(false);
   const date = (timeStamp) => {
     let dateFormat = new Date(timeStamp);
     return (dateFormat.getDate()+
@@ -55,6 +56,7 @@ export default function Home() {
 			seeEvents();
 			seeMusic();
       setShowModdal(false);
+      setShowMusicModdal(false);
 		}
 	}, [signer]);
 
@@ -194,7 +196,7 @@ export default function Home() {
             <span className='block text-2xl mt-8'>We provide a level playing field, allowing emerging</span>
             <span className='block text-2xl mt-2'>artists to compete with established musicians</span>
 
-            <Link href='/list_music'> <span className='mt-8'>Sign Up As An Artist</span></Link>
+            <Link href='/list_music'> <span className='block border-2 px-5 text-2xl mt-12 w-fit text-center rounded-md'>Sign Up As An Artist</span></Link>
           </div>
         </div>
 
@@ -257,9 +259,9 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='mt-20'>
-            <div className='flex justify-center text-5xl'>TOP SONGS</div>
-            <div className=' grid grid-cols-3 gap-10'>
+        <div className='mt-24'>
+            <div className='flex justify-center text-5xl mb-10'>TOP SONGS</div>
+            <div className=' grid grid-cols-3 gap-10 relative'>
             {
                 musicList?.map((res) =>(
                   <div className='border-4 border-white rounded-2xl py-4 px-4 shadow-md' key={res.musicId}>
@@ -269,14 +271,33 @@ export default function Home() {
                   <span className='block mt-2 text-2xl'>Price(ETH): {((res.etherPrice)/1e18).toString()} ETH</span>
                   <span className='block mt-2 text-2xl'>Price(ETT): {((res.tokenPrice)/1e18).toString()} $ETT</span>
                   <span className='block mt-2 text-2xl'>Downloads: {(res.buyers).toString()}</span>
-                  <span className='block border-2 w-36 text-center text-2xl mt-8 rounded-md cursor-pointer mb-10' onClick={(e)=>setShowModdal(true)}>Buy Music</span>
+                  <span className='block border-2 w-36 text-center text-2xl mt-8 rounded-md cursor-pointer mb-10' onClick={(e)=>setShowMusicModdal(true)}>Buy Music</span>
                 </div>
                 ))
               }
+
+
+            {showMusicModal? (
+                  <div className='flex-col absolute justify-center items-center text-black'>
+                  <div className='bg-red-400 opacity-70 w-80 rounded-md z-50'>
+                    <div className='flex justify-end'>
+                    <span onClick={()=> setShowMusicModdal(false)} className='mr-5 mt-2 cursor-pointer'>X</span>
+                    </div>
+                      <div className='flex justify-center'>
+                        <input className='rounded-md text-center' type='number' placeholder='Event ID' />
+                      </div>
+              
+                      <div className='mt-4 flex-col gap-10 w-full px-6 mb-8'>
+                         <span className='border-2 rounded-md cursor-pointer'>Buy with Ether</span>
+                         <span className='border-2 rounded-md cursor-pointer'>Buy with Token</span>
+                      </div>
+
+                            
+                  </div>
+                  </div>
+              ) : null}
             </div>
         </div>
-
-     
 
     </main>
   )

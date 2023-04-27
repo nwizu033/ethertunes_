@@ -124,7 +124,7 @@ const metadatas = {
             <input className=' w-full block mt-5 px-8 py-4 rounded-md text-black text-2xl' onChange={(e)=> setPriceEth(e.target.value)} type='number' placeholder='Music price in ETH'/> 
             <input className=' w-full block mt-5 px-8 py-4 rounded-md text-black text-2xl' onChange={(e)=> setPriceETT(e.target.value)} type='number' placeholder='Music price in $ETT'/>  
             <input className=' w-full block mt-5 px-8 py-4 rounded-md text-black text-2xl' onChange={(e)=> setTokenUri(e.target.value)} type='text' placeholder='Token URI copied above'/> 
-            <button className='w-full block px-8 py-4 rounded-md border-2 mt-16 text-2xl' onClick={createMusic}>List event</button>
+            <button className='w-full block px-8 py-4 rounded-md border-2 mt-16 text-2xl' onClick={createMusic}>List Music</button>
             </div>
         </div>
 
