@@ -108,8 +108,8 @@ const metadatas = {
         <div className='flex-col justify-center mt-20'>
             <div className='text-center text-3xl'>UPLOAD SONG COVER</div>
             <div className=' w-full px-44'>
-                <input className=' w-full block mt-5 px-8 py-4 rounded-md text-black text-2xl' onChange={(e)=> {setEventName(e.target.value)}} type='text' placeholder='Name of event'/> 
-                <input className=' w-full block mt-5 px-8 py-4 rounded-md text-black text-2xl' onChange={(e)=> setEventDesc(e.target.value)} type='text' placeholder='Description of event'/> 
+                <input className=' w-full block mt-5 px-8 py-4 rounded-md text-black text-2xl' onChange={(e)=> {setEventName(e.target.value)}} type='text' placeholder='Name of song'/> 
+                <input className=' w-full block mt-5 px-8 py-4 rounded-md text-black text-2xl' onChange={(e)=> setEventDesc(e.target.value)} type='text' placeholder='Description of song'/> 
                 <input className=' w-full block mt-5' onChange={(e)=> setImage(e.target.files[0])} type='file'/> <br/> <br/>
                 <button className='w-full block px-8 py-4 rounded-md border-2 text-2xl' onClick={upload}>Upload cover first</button>
                 <h3 className='mt-4'>Token URI: {`ipfs://${newHash}`}</h3>
