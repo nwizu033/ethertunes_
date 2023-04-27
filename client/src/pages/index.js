@@ -238,17 +238,18 @@ export default function Home() {
 
           {showModal? (
                   <div className='fixed inset-0 bg-slate-300 bg-opacity-25 backdrop-blur-sm flex justify-center items-center text-black'>
-                  <div className='bg-white w-80 rounded-md z-10'>
+                  <div className='bg-white lg:w-[600px] rounded-md z-10'>
                     <div className='flex justify-end'>
-                    <span onClick={()=> setShowModdal(false)} className='mr-5 mt-2 cursor-pointer'>X</span>
+                    <span onClick={()=> setShowModdal(false)} className='block mr-5 cursor-pointer mb-6'>X</span>
                     </div>
+                    <div className='text-2xl flex justify-center font-semibold'>BUY TICKET</div>
                       <div className='flex justify-center'>
-                        <input className='rounded-md text-center' type='number' placeholder='Event ID' />
+                        <input className='rounded-md text-center border-black border-2 w-full mx-[8%] py-2' type='number' placeholder='Event ID' />
                       </div>
               
-                      <div className='mt-4 flex-col gap-10 w-full px-6 mb-8'>
-                         <span className='border-2 rounded-md cursor-pointer'>Buy with Ether</span>
-                         <span className='border-2 rounded-md cursor-pointer'>Buy with Token</span>
+                      <div className='mt-4 flex w-full px-6 mb-8 justify-around'>
+                         <span className='border-2 rounded-md cursor-pointer px-5 py-4 bg-blue-500'>Buy with Ether</span>
+                         <span className='border-2 rounded-md cursor-pointer px-5 py-4 bg-purple-500'>Buy with Token</span>
                       </div>
 
                             
