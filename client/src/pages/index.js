@@ -54,6 +54,7 @@ export default function Home() {
 		if (signer) {
 			seeEvents();
 			seeMusic();
+      setShowModdal(false);
 		}
 	}, [signer]);
 
