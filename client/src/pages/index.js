@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <main>
-         <div className='flex justify-between  mt-40'>
+         <div className='flex justify-between xl:max-w-7xl mt-20'>
           <div className='px-10'>
             <h1 className='text-8xl mt-32'>EtherTunes</h1>
             <span className='block text-2xl py-4 tracking-wider'>Audio/Video Streaming, Music NFT</span>
@@ -223,7 +223,7 @@ export default function Home() {
             <div className='grid md:grid-cols-3 gap-10 '>
               {
                 eventList?.map((res) =>(
-                  <div className='border-4 border-white rounded-2xl py-4 px-4 shadow-md relative' key={res.eventId}>
+                  <div className='border-4 border-white rounded-2xl py-4 px-4 shadow-md' key={res.eventId}>
                   <span className='block text-3xl text-center my-4 uppercase'>{res.theme}</span>
                   <span className='block text-2xl'>Event ID: {(res.eventId).toString()}</span>
                   <span className='block mt-2 text-2xl'>Reg fee(ETH): {((res.registrationFeeEther)/1e18).toString()} ETH</span>
@@ -237,8 +237,8 @@ export default function Home() {
               }
 
           {showModal? (
-                  <div className='flex-col absolute justify-center items-center text-black'>
-                  <div className='bg-slate-400 opacity-70 w-80 rounded-md z-50'>
+                  <div className='fixed inset-0 bg-slate-300 bg-opacity-25 backdrop-blur-sm flex justify-center items-center text-black'>
+                  <div className='bg-white w-80 rounded-md z-10'>
                     <div className='flex justify-end'>
                     <span onClick={()=> setShowModdal(false)} className='mr-5 mt-2 cursor-pointer'>X</span>
                     </div>
