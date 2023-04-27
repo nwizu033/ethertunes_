@@ -278,7 +278,7 @@ export default function Home() {
 
 
             {showMusicModal? (
-                  <div className='flex-col absolute justify-center items-center text-black'>
+                  <div className='flex absolute justify-center items-center text-black'>
                   <div className='bg-red-400 opacity-70 w-80 rounded-md z-50'>
                     <div className='flex justify-end'>
                     <span onClick={()=> setShowMusicModdal(false)} className='mr-5 mt-2 cursor-pointer'>X</span>
