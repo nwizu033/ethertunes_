@@ -12,8 +12,8 @@ function Navbar() {
           </div>
           <div className='flex gap-20 ml-48 text-2xl'>
             <Link href='/'>Home</Link>
-            <Link href='/'>Events</Link>
-            <Link href='/'>Music NFTs</Link>
+            <Link href='/events'>Events</Link>
+            <Link href='/musicnfts'>Music NFTs</Link>
             <Link href='/'>Whitepaper</Link>
           </div>
              {/* <div className='mr-6'>Connect wallet</div> */}

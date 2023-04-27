@@ -1,0 +1,413 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_musicId",
+				"type": "uint256"
+			}
+		],
+		"name": "buyMusicWithEther",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_musicId",
+				"type": "uint256"
+			}
+		],
+		"name": "buyMusicWithToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "theme",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "endTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "regFeeEther",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "regFeeToken",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxAttendees",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "tokenUri",
+				"type": "string"
+			}
+		],
+		"name": "listEvent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "artist",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_etherPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "tokenUri",
+				"type": "string"
+			}
+		],
+		"name": "listMusic",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_eventId",
+				"type": "uint256"
+			}
+		],
+		"name": "registerEventWithEther",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_eventId",
+				"type": "uint256"
+			}
+		],
+		"name": "registerEventWithToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_token",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_eventId",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawEventEther",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_eventId",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawEventToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_musicId",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawMusicEther",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_musicId",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawMusicToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "_eventStruct",
+		"outputs": [
+			{
+				"internalType": "contract eventStruct",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "_musicStruct",
+		"outputs": [
+			{
+				"internalType": "contract musicStruct",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "eventIds",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "listedEvents",
+		"outputs": [
+			{
+				"internalType": "contract eventStruct",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "listedMusic",
+		"outputs": [
+			{
+				"internalType": "contract musicStruct",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "musicIds",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "seeEvents",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "theme",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "eventId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "registrationFeeEther",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "registrationFeeToken",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxAttendees",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentRegistrants",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "withdrawnEther",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "withdrawnToken",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "TOKEN_URI",
+						"type": "string"
+					}
+				],
+				"internalType": "struct EtherTunes.eventCard[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "seeMusics",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "musicId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "artist",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "etherPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalEtherRaised",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalTokenRaised",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentEthers",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentTokens",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buyers",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "tokenUri",
+						"type": "string"
+					}
+				],
+				"internalType": "struct EtherTunes.musicCard[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
