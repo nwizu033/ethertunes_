@@ -24,7 +24,7 @@ function Navbar() {
               <li><Link href='/' className="lg:px-5 font-semibold hover:text-purple-600">Home</Link></li>
               <li><Link href='/events' className="lg:px-5 font-semibold  hover:text-purple-600">Events</Link></li>
               <li><Link href='/musicnfts' className="lg:px-5 font-semibold  hover:text-purple-600">Music NFTs</Link></li>
-              <li><Link href='https://app.gitbook.com/o/J7nKfvAEzUPYMvNtA9SZ/s/brRSxa7KCLGS9NIyw8lx/~/changes/3/ethertunes-token/deployed-contracts' className="lg:px-5 font-semibold  hover:text-purple-600">Whitepaper</Link></li>
+              <li><Link href='https://app.gitbook.com/o/J7nKfvAEzUPYMvNtA9SZ/s/brRSxa7KCLGS9NIyw8lx/start-here/what-is-ethertunes' className="lg:px-5 font-semibold  hover:text-purple-600">Whitepaper</Link></li>
              <li className="lg:ml-10"><Web3Button/></li>
             </ul>
             </nav>
